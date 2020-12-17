@@ -20,32 +20,36 @@
 <!-- Used to detect the scrollable area. -->
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<!-- Having 'fixed-top' makes the navbar stick to top when scrolling. -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-	<!-- Changes the 'Home' text on navbar. -->
 	<a class="navbar-brand" href="index.html">X00148375</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
 	<!-- Each of these adds new navbar link. -->
-	<ul class="navbar-nav">
-		<li class="nav-item">
-			<a class="nav-link" href="#AboutSection">About Me</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#EducationSection">Education & Qualifications</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#TechnicalSkills">Technical Skills</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#Projects">Projects</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#WorkExperience">Work Experience</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#Interests&Achievements">Interests & Achievements</a>
-		</li>
-	</ul>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#AboutSection">About Me</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#EducationSection">Education & Qualifications</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#TechnicalSkills">Technical Skills</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#Projects">Projects</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#WorkExperience">Work Experience</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#Interests&Achievements">Interests & Achievements</a>
+			</li>
+		</ul>
+	</div>
 </nav>
+<body>
 
 <div class="jumbotron jumbotron-fluid text-center">
 	<div class="container">
@@ -58,546 +62,567 @@
 		<h3>4th Yr Bsc (Hons) Computing | Data Analytics | TUD Tallaght</h3>
 		<p></p>
 		<p></p>
-		<h5>Email: X00148375@mytudublin.ie</h5>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myInfoModal">Contact Information</button>
+		<div class="modal" id="myInfoModal">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title">Contact Information</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body">
+						<p><strong>Email</strong>: X00148375@mytudublin.ie</p>
+						<p><strong>Phone No</strong>: 0857085414</p>
+						<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="craiglarkin"><a class="LI-simple-link" href='https://ie.linkedin.com/in/craiglarkin?trk=profile-badge'>Craig Larkin</a></div>
+						<!-- <p><strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/craiglarkin/" target="_blank" rel="noopener noreferrer">Craig Larkin</a></p> -->
+					</div>
+
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+		  </div>
+		</div>
 	</div>
 </div>
 
-<body>
+<div class="parallax">
+	<div id="AboutSection"></div>
+	<div class="AboutContainer">
+		<h1>About Me:</h1>
+		<h6>I am a very enthusiastic and motivated developer currently studying Computer Science at TUD Tallaght Campus since September 2017 with a GPA of 2.92. I have developed multiple applications and websites using a range of technologies including Java, C++, HTML, Javascript, CSS and SQL. I am a very organised and confident individual with excellent interpersonal skills which I am continuously developing through my experience of working with customers in my part-time work. I am applying for an entry-level position within the computing industry with a plan of enhancing my skills & ability.</h6>
+		<button class="CVbtn"><i class="fa fa-download"></i><a href="Files/CraigLarkinCV.docx" download="CraigLarkinCV">Download CV</a></button>
+	</div>
 
-<div id="AboutSection"></div>
-<div class="AboutContainer">
-	<h1>About Me:</h1>
-	<h6>I am a very enthusiastic and motivated developer currently studying Computer Science at TUD Tallaght Campus since September 2017 with a GPA of 2.92. I have developed multiple applications and websites using a range of technologies including Java, C++, HTML, Javascript, CSS and SQL. I am a very organised and confident individual with excellent interpersonal skills which I am continuously developing through my experience of working with customers in my part-time work. I am applying for an entry-level position within the computing industry with a plan of enhancing my skills & ability.</h6>
-	<button class="CVbtn"><i class="fa fa-download"></i><a href="Files/CraigLarkinCV.docx" download="CraigLarkinCV">Download CV</a></button>
-</div>
-
-<div id="EducationSection"></div>
-<div class="EducationContainer">
-	<h1>Education & Qualifications:</h1>
-	<div id="TallaghtAccordion">
-		<div class="card">
-			<div class="card-header" id="headingTUD">
-				<h5 class="mb-0">
-					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseTUDbody" aria-expanded="true" aria-controls="collapseTUDbody">
-						TUD Tallaght - 2017-2021
+	<div id="EducationSection"></div>
+	<div class="EducationContainer">
+		<h1>Education & Qualifications:</h1>
+		<div id="TallaghtAccordion">
+			<div class="card">
+				<div class="card-header" id="headingTUD">
+					<h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseTUDbody" aria-expanded="true" aria-controls="collapseTUDbody">
+							TUD Tallaght - 2017-2021
+						</button>
+					</h5>
+				</div>
+				<div id="collapseTUDbody" class="collapse" aria-labelledby="headingTUD" data-parent="#TallaghtAccordion">
+					<div class="card-body">
+						<div id="TUDaccordion">
+							<div class="card">
+								<div class="card-header" id="headingOne">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											Year 4
+										</button>
+									</h5>
+								</div>
+								<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#TUDaccordion">
+									<div class="card-body">
+										<!-- Year 4 Card information goes into here. -->
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>Module</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Data Analytics Project</td>
+												</tr>
+												<tr>
+													<td>Enterprise Performance Architecture</td>
+												</tr>
+												<tr>
+													<td>Information Management</td>
+												</tr>
+												<tr>
+													<td>Interactive Media Design & Visualisation</td>
+												</tr>
+												<tr>
+													<td>Machine Learning</td>
+												</tr>
+												<tr>
+													<td>Social Media Analysis</td>
+												</tr>
+											</tbody>
+										</table>
+										<h6>Stage GPA: 2.29</h6>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingTwo">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+											Year 3
+									</button>
+								</h5>
+							</div>
+								<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#TUDaccordion">
+									<div class="card-body">
+										<!-- Year 3 Card information goes into here. -->
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>Module</th>
+													<th>Final Grade</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Experiental Learning (Internship)</td>
+													<td>PS</td>
+												</tr>
+												<tr>
+													<td>Operating Systems</td>
+													<td>B</td>
+												</tr>
+												<tr>
+													<td>Server-side Web Development</td>
+													<td>D</td>
+												</tr>
+												<tr>
+													<td>Cloud Service & Distrib Comp</td>
+													<td>C<td>
+												</tr>
+												<tr>
+													<td>Big Data Technologies</td>
+													<td>B-</td>
+												</tr>
+												<tr>
+													<td>Data Analysis</td>
+													<td>C+</td>
+												</tr>
+												<tr>
+													<td>Data Structures & Algorithm</td>
+													<td>C</td>
+												</tr>
+											</tbody>
+										</table>
+										<h6>Stage GPA: 2.29</h6>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingThree">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+											Year 2
+									</button>
+								</h5>
+								</div>
+								<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#TUDaccordion">
+									<div class="card-body">
+										<!-- Year 2 Card information goes into here. -->
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>Module</th>
+													<th>Final Grade</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Software Development 3</td>
+													<td>B</td>
+												</tr>
+												<tr>
+													<td>Software Qual Ass & Testing</td>
+													<td>B+</td>
+												</tr>
+												<tr>
+													<td>Network Fundementals</td>
+													<td>B</td>
+												</tr>
+												<tr>
+													<td>Adv Database Technologies</td>
+													<td>B-</td>
+												</tr>
+												<tr>
+													<td>Discrete Mathematics 2</td>
+													<td>A</td>
+												</tr>
+												<tr>
+													<td>Client side Web Development</td>
+													<td>B</td>
+												</tr>
+												<tr>
+													<td>Software Development 4</td>
+													<td>B-</td>
+												</tr>
+												<tr>
+													<td>Project</td>
+													<td>C</td>
+												</tr>
+												<tr>
+													<td>Routing & Switching Ess</td>
+													<td>B</td>
+												</tr>
+												<tr>
+													<td>Management Science</td>
+													<td>B+</td>
+												</tr>
+												<tr>
+													<td>Database Admin & Analysis</td>
+													<td>C</td>
+												</tr>
+												<tr>
+													<td>Information Security</td>
+													<td>C+</td>
+												</tr>
+											</tbody>
+										</table>
+										<h6>Stage GPA: 2.92</h6>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="headingFour">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+											Year 1
+										</button>
+									</h5>
+								</div>
+								<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#TUDaccordion">
+									<div class="card-body">
+										<!-- Year 1 information goes into here. -->
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>Module</th>
+													<th>Final Grade</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Computer Architecture</td>
+													<td>B+</td>
+												</tr>
+												<tr>
+													<td>Social Media Communications</td>
+													<td>B+</td>
+												</tr>
+												<tr>
+													<td>Database Fundamentals</td>
+													<td>B+</td>
+												</tr>
+												<tr>
+													<td>Business & Information Systems</td>
+													<td>B</td>
+												</tr>
+												<tr>
+													<td>Learning to Learn at 3rd Lvl</td>
+													<td>B+</td>
+												</tr>
+												<tr>
+													<td>Discrete Mathematics 1</td>
+													<td>C</td>
+												</tr>
+												<tr>
+													<td>Operating Syst Fundamentals</td>
+													<td>B+</td>
+												</tr>
+												<tr>
+													<td>Statistics</td>
+													<td>C+</td>
+												</tr>
+												<tr>
+													<td>Software Development 1</td>
+													<td>B</td>
+												</tr>
+												<tr>
+													<td>Software Development 2</td>
+													<td>B+</td>
+												</tr>
+												<tr>
+													<td>Object Oriented System Analysis</td>
+													<td>B+</td>
+												</tr>
+												<tr>
+													<td>Fundamentals of Interface & Web Design</td>
+													<td>B</td>
+												</tr>
+											</tbody>
+										</table>
+										<h6>Stage GPA: 3.17</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="SecondarySchoolAccordion">
+			<div class="card">
+				<div class="card-header" id="2NDheadingOne">
+					<h5 class="mb-0">
+					<button class="btn btn-link" data-toggle="collapse" data-target="#collapse2NDOne" aria-expanded="true" aria-controls="collapse2NDOne">
+					Leaving Certificate 2017
 					</button>
-				</h5>
-			</div>
-			<div id="collapseTUDbody" class="collapse" aria-labelledby="headingTUD" data-parent="#TallaghtAccordion">
-				<div class="card-body">
-					<div id="TUDaccordion">
-						<div class="card">
-							<div class="card-header" id="headingOne">
-								<h5 class="mb-0">
-									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-										Year 4
-									</button>
-								</h5>
-							</div>
-							<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#TUDaccordion">
-								<div class="card-body">
-									<!-- Year 4 Card information goes into here. -->
-									<table class="table table-striped">
-										<thead>
-											<tr>
-												<th>Module</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Data Analytics Project</td>
-											</tr>
-											<tr>
-												<td>Enterprise Performance Architecture</td>
-											</tr>
-											<tr>
-												<td>Information Management</td>
-											</tr>
-											<tr>
-												<td>Interactive Media Design & Visualisation</td>
-											</tr>
-											<tr>
-												<td>Machine Learning</td>
-											</tr>
-											<tr>
-												<td>Social Media Analysis</td>
-											</tr>
-										</tbody>
-									</table>
-									<h6>Stage GPA: 2.29</h6>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header" id="headingTwo">
-								<h5 class="mb-0">
-									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-										Year 3
-								</button>
-							</h5>
-						</div>
-							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#TUDaccordion">
-								<div class="card-body">
-									<!-- Year 3 Card information goes into here. -->
-									<table class="table table-striped">
-										<thead>
-											<tr>
-												<th>Module</th>
-												<th>Final Grade</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Experiental Learning (Internship)</td>
-												<td>PS</td>
-											</tr>
-											<tr>
-												<td>Operating Systems</td>
-												<td>B</td>
-											</tr>
-											<tr>
-												<td>Server-side Web Development</td>
-												<td>D</td>
-											</tr>
-											<tr>
-												<td>Cloud Service & Distrib Comp</td>
-												<td>C<td>
-											</tr>
-											<tr>
-												<td>Big Data Technologies</td>
-												<td>B-</td>
-											</tr>
-											<tr>
-												<td>Data Analysis</td>
-												<td>C+</td>
-											</tr>
-											<tr>
-												<td>Data Structures & Algorithm</td>
-												<td>C</td>
-											</tr>
-										</tbody>
-									</table>
-									<h6>Stage GPA: 2.29</h6>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header" id="headingThree">
-								<h5 class="mb-0">
-									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-										Year 2
-								</button>
-							</h5>
-							</div>
-							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#TUDaccordion">
-								<div class="card-body">
-									<!-- Year 2 Card information goes into here. -->
-									<table class="table table-striped">
-										<thead>
-											<tr>
-												<th>Module</th>
-												<th>Final Grade</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Software Development 3</td>
-												<td>B</td>
-											</tr>
-											<tr>
-												<td>Software Qual Ass & Testing</td>
-												<td>B+</td>
-											</tr>
-											<tr>
-												<td>Network Fundementals</td>
-												<td>B</td>
-											</tr>
-											<tr>
-												<td>Adv Database Technologies</td>
-												<td>B-</td>
-											</tr>
-											<tr>
-												<td>Discrete Mathematics 2</td>
-												<td>A</td>
-											</tr>
-											<tr>
-												<td>Client side Web Development</td>
-												<td>B</td>
-											</tr>
-											<tr>
-												<td>Software Development 4</td>
-												<td>B-</td>
-											</tr>
-											<tr>
-												<td>Project</td>
-												<td>C</td>
-											</tr>
-											<tr>
-												<td>Routing & Switching Ess</td>
-												<td>B</td>
-											</tr>
-											<tr>
-												<td>Management Science</td>
-												<td>B+</td>
-											</tr>
-											<tr>
-												<td>Database Admin & Analysis</td>
-												<td>C</td>
-											</tr>
-											<tr>
-												<td>Information Security</td>
-												<td>C+</td>
-											</tr>
-										</tbody>
-									</table>
-									<h6>Stage GPA: 2.92</h6>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header" id="headingFour">
-								<h5 class="mb-0">
-									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-										Year 1
-									</button>
-								</h5>
-							</div>
-							<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#TUDaccordion">
-								<div class="card-body">
-									<!-- Year 1 information goes into here. -->
-									<table class="table table-striped">
-										<thead>
-											<tr>
-												<th>Module</th>
-												<th>Final Grade</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Computer Architecture</td>
-												<td>B+</td>
-											</tr>
-											<tr>
-												<td>Social Media Communications</td>
-												<td>B+</td>
-											</tr>
-											<tr>
-												<td>Database Fundamentals</td>
-												<td>B+</td>
-											</tr>
-											<tr>
-												<td>Business & Information Systems</td>
-												<td>B</td>
-											</tr>
-											<tr>
-												<td>Learning to Learn at 3rd Lvl</td>
-												<td>B+</td>
-											</tr>
-											<tr>
-												<td>Discrete Mathematics 1</td>
-												<td>C</td>
-											</tr>
-											<tr>
-												<td>Operating Syst Fundamentals</td>
-												<td>B+</td>
-											</tr>
-											<tr>
-												<td>Statistics</td>
-												<td>C+</td>
-											</tr>
-											<tr>
-												<td>Software Development 1</td>
-												<td>B</td>
-											</tr>
-											<tr>
-												<td>Software Development 2</td>
-												<td>B+</td>
-											</tr>
-											<tr>
-												<td>Object Oriented System Analysis</td>
-												<td>B+</td>
-											</tr>
-											<tr>
-												<td>Fundamentals of Interface & Web Design</td>
-												<td>B</td>
-											</tr>
-										</tbody>
-									</table>
-									<h6>Stage GPA: 3.17</h6>
-								</div>
-							</div>
-						</div>
+					</h5>
+				</div>
+				<div id="collapse2NDOne" class="collapse" aria-labelledby="heading2NDOne" data-parent="#SecondarySchoolAccordion">
+					<div class="card-body">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Subject</th>
+									<th>Level</th>
+									<th>Grade</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Irish</td>
+									<td>Ordinary</td>
+									<td>05</td>
+									
+								</tr>
+								<tr>
+									<td>English</td>
+									<td>Ordinary</td>
+									<td>05</td>
+								</tr>
+								<tr>
+									<td>Mathematics</td>
+									<td>Ordinary</td>
+									<td>04</td>
+								</tr>
+								<tr>
+									<td>Geography</td>
+									<td>Higher</td>
+									<td>H6</td>
+								</tr>
+								<tr>
+									<td>Spanish</td>
+									<td>Ordinary</td>
+									<td>04</td>
+								</tr>
+								<tr>
+									<td>Art</td>
+									<td>Higher</td>
+									<td>H6</td>
+								</tr>
+								<tr>
+									<td>Business</td>
+									<td>Higher</td>
+									<td>05</td>
+								</tr>
+							</tbody>
+						</table>
+						<h6>Total Points: 224</h6>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="SecondarySchoolAccordion">
-		<div class="card">
-			<div class="card-header" id="2NDheadingOne">
-				<h5 class="mb-0">
-				<button class="btn btn-link" data-toggle="collapse" data-target="#collapse2NDOne" aria-expanded="true" aria-controls="collapse2NDOne">
-				Leaving Certificate 2017
-				</button>
-				</h5>
+
+	<div id="TechnicalSkills"></div>
+	<div class="TechSkillsContainer">
+		<h1>Technical Skills</h1>
+		<p>•	Confident developer in Java (also learning JavaScript and C++ at time of writing)</p>
+		<p>•	Ability to write SQL queries to an intermediate level using Oracle 11G</p>
+		<p>•	Experience of designing, creating and maintaining database schemas</p>
+		<p>•	Ability to develop websites using Java, CSS and HTML</p>
+		<p>•	Experience with cloud environments such as Azure</p>
+		<p>•	Ability to analyse data through Excel & Python.</p>
+		<p>•	Confident user of Windows and Linux Operating Systems in system administration</p>
+		<p>•	Design, build and troubleshoot a network using routers and hubs using related tools</p>
+		<p>•	Configure a router using the Cisco IOS command set</p>
+		<p>•	Administer an Oracle 11G database server using Enterprise Manager & related SQL commands</p>
+	</div>
+
+	<div id="Projects"></div>
+	<div class="ProjectsContainer">
+		<h1>Projects:</h1>
+		<div class="row">
+			<div class="col">
+				<div class="youtubeCard">
+					<img class="card-img-top" src="Images/youtube-logo.png" alt="YouTube Logo">
+					<div class="youtubeCard-body">
+						<h4 class="card-title">YouTube Video Views Predictive Analysis</h4>
+						<p class="card-text">I am hoping to be able to create a predictive model that will be able to judge if a YouTube video will gain lots of views or traction and make it to the trending page.</p>
+						<a href="Files/URL Scraping.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Project Script Sample</a>
+					</div>
+				</div>
 			</div>
-			<div id="collapse2NDOne" class="collapse" aria-labelledby="heading2NDOne" data-parent="#SecondarySchoolAccordion">
-				<div class="card-body">
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>Subject</th>
-								<th>Level</th>
-								<th>Grade</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Irish</td>
-								<td>Ordinary</td>
-								<td>05</td>
-								
-							</tr>
-							<tr>
-								<td>English</td>
-								<td>Ordinary</td>
-								<td>05</td>
-							</tr>
-							<tr>
-								<td>Mathematics</td>
-								<td>Ordinary</td>
-								<td>04</td>
-							</tr>
-							<tr>
-								<td>Geography</td>
-								<td>Higher</td>
-								<td>H6</td>
-							</tr>
-							<tr>
-								<td>Spanish</td>
-								<td>Ordinary</td>
-								<td>04</td>
-							</tr>
-							<tr>
-								<td>Art</td>
-								<td>Higher</td>
-								<td>H6</td>
-							</tr>
-							<tr>
-								<td>Business</td>
-								<td>Higher</td>
-								<td>05</td>
-							</tr>
-						</tbody>
-					</table>
-					<h6>Total Points: 224</h6>
+			<div class="col">
+				<div class="bikeCard">
+					<img class="card-img-top" src="Images/bicycle.jpg" alt="Bike image">
+					<div class="bikeCard-body">
+						<h4 class="card-title">London Bike Rental</h4>
+						<p class="card-text">I took a dataset based on statistics from London with bike rentals. It used attributes such as temperature, number of bikes used, date, wind speed, if it was a holiday or weekend, and what season it was. I combined these together to create graphs that would show my findings. </p>
+						<a href="https://pastebin.com/sPUaZ7Ne" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Pastebin</a>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="projectCard">
+					<img class="card-img-top" src="Images/music-disc.jpg" alt="Music Disc">
+					<div class="bikeCard-body">
+						<h4 class="card-title">Music Store Sales and Stock Control</h4>
+						<p class="card-text">Team project involving the planning, designing & development of an e-commerce website where people can browse and buy different items such as vinyl’s and merchandise from their favourite artists. Features included account creation & deletion, CRUD, shopping cart, browsing products, downloading samples, listening to music samples, stock management.</p>
+						<a href="Files/MusicStoreYr2Project" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download Report</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div id="TechnicalSkills"></div>
-<div class="TechSkillsContainer">
-	<h1>Technical Skills</h1>
-	<p>•	Confident developer in Java (also learning JavaScript and C++ at time of writing)</p>
-	<p>•	Ability to write SQL queries to an intermediate level using Oracle 11G</p>
-	<p>•	Experience of designing, creating and maintaining database schemas</p>
-	<p>•	Ability to develop websites using Java, CSS and HTML</p>
-	<p>•	Experience with cloud environments such as Azure</p>
-	<p>•	Ability to analyse data through Excel & Python.</p>
-	<p>•	Confident user of Windows and Linux Operating Systems in system administration</p>
-	<p>•	Design, build and troubleshoot a network using routers and hubs using related tools<</p>
-	<p>•	Configure a router using the Cisco IOS command set</p>
-	<p>•	Administer an Oracle 11G database server using Enterprise Manager & related SQL commands</p>
-</div>
-
-<div id="Projects"></div>
-<div class="ProjectsContainer">
-	<h1>Projects:</h1>
-	<div class="row">
-		<div class="col">
-			<div class="youtubeCard">
-				<img class="card-img-top" src="Images/youtube-logo.png" alt="YouTube Logo">
-				<div class="youtubeCard-body">
-					<h4 class="card-title">YouTube Video Views Predictive Analysis</h4>
-					<p class="card-text">I am hoping to be able to create a predictive model that will be able to judge if a YouTube video will gain lots of views or traction and make it to the trending page.</p>
-					<a href="Files/URL Scraping.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Project Script Sample</a>
-				</div>
+	<div id="WorkExperience"></div>
+	<div class="WorkExpContainer">
+		<h1>Work Experience</h1>
+		<p></p>
+		<p></p>
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="Images/evros.png" alt="Evros"></img>
+			</div>
+			<div class="col-sm-9">
+				<h5>Evros Technology Group - IT Support Analyst Intern</h5>
+				<h6>January 2020 - August 2020</h6>
+				<p>I was a IT Support Analyst for Evros Technology Group as part of my 3rd year of college. I started on the Mater helpdesk where I answered calls and emails, and I created tickets for the internal team to look after.
+				After two months of being on this desk I was moved to the Rehab helpdesk. On this desk I learned many more useful technologies. These technologies include IT Glue, Kaseya, GoToAssist, Microsoft Office Admin Portal, Active Directory, Bomgar, etc...
+				While on this desk I provided general computer support, helped with printer setups, account management, network support, remote connection support and many others. I learned lots of valuable information about the industry that I want to work in.
+				</p>
 			</div>
 		</div>
-		<div class="col">
-			<div class="bikeCard">
-				<img class="card-img-top" src="Images/bicycle.jpg" alt="Bike image">
-				<div class="bikeCard-body">
-					<h4 class="card-title">London Bike Rental</h4>
-					<p class="card-text">I took a dataset based on statistics from London with bike rentals. It used attributes such as temperature, number of bikes used, date, wind speed, if it was a holiday or weekend, and what season it was. I combined these together to create graphs that would show my findings. </p>
-					<a href="https://pastebin.com/sPUaZ7Ne" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Pastebin</a>
-				</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="Images/supervalu.png" alt="SuperValu"></img>
+			</div>
+			<div class="col-sm-9">
+				<h5>SuperValu - Shop Floor Assistant</h5>
+				<h6>November 2018 - October 2019</h6>
+				<p>Attending to customer requests & ensuring their needs are met, ensuring product availability, daily intake of products, upkeep of fridges and freezers, facing off the shop floor & managing product inventory in storage.</p>
 			</div>
 		</div>
-		<div class="col">
-			<div class="projectCard">
-				<img class="card-img-top" src="Images/music-disc.jpg" alt="Music Disc">
-				<div class="bikeCard-body">
-					<h4 class="card-title">Music Store Sales and Stock Control</h4>
-					<p class="card-text">Team project involving the planning, designing & development of an e-commerce website where people can browse and buy different items such as vinyl’s and merchandise from their favourite artists. Features included account creation & deletion, CRUD, shopping cart, browsing products, downloading samples, listening to music samples, stock management.</p>
-					<a href="Files/MusicStoreYr2Project" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download Report</a>
-				</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="Images/pulse-security.png" alt="Pulse"></img>
+			</div>
+			<div class="col-sm-9">
+				<h5>Pulse Security - Steward</h5>
+				<h6>May 2017 - October 2017</h6>
+				<p>While working for Pulse Security I catered to questions that members of the public had, ensured the safety of the public, guarded access to backstage at concerts and festivals, check identification of people and ensured there was no dangers present.
+				I worked at many Ireland National Team football matches in the Aviva stadium, Longitude Festival 2017, Electric Picnic 2017, Ed Sheeran concert, and Irish Drifting Championship in Dun Laoghaire.
+				</p>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div id="WorkExperience"></div>
-<div class="WorkExpContainer">
-	<h1>Work Experience</h1>
-	<p></p>
-	<p></p>
-	<div class="row">
-		<div class="col-sm-3">
-			<img src="Images/evros.png" alt="Evros"></img>
-		</div>
-		<div class="col-sm-9">
-			<h5>Evros Technology Group - IT Support Analyst Intern</h5>
-			<h6>January 2020 - August 2020</h6>
-			<p>I was a IT Support Analyst for Evros Technology Group as part of my 3rd year of college. I started on the Mater helpdesk where I answered calls and emails, and I created tickets for the internal team to look after.
-			After two months of being on this desk I was moved to the Rehab helpdesk. On this desk I learned many more useful technologies. These technologies include IT Glue, Kaseya, GoToAssist, Microsoft Office Admin Portal, Active Directory, Bomgar, etc...
-			While on this desk I provided general computer support, helped with printer setups, account management, network support, remote connection support and many others. I learned lots of valuable information about the industry that I want to work in.
-			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-3">
-			<img src="Images/supervalu.png" alt="SuperValu"></img>
-		</div>
-		<div class="col-sm-9">
-			<h5>SuperValu - Shop Floor Assistant</h5>
-			<h6>November 2018 - October 2019</h6>
-			<p>Attending to customer requests & ensuring their needs are met, ensuring product availability, daily intake of products, upkeep of fridges and freezers, facing off the shop floor & managing product inventory in storage.</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-3">
-			<img src="Images/pulse-security.png" alt="Pulse"></img>
-		</div>
-		<div class="col-sm-9">
-			<h5>Pulse Security - Steward</h5>
-			<h6>May 2017 - October 2017</h6>
-			<p>While working for Pulse Security I catered to questions that members of the public had, ensured the safety of the public, guarded access to backstage at concerts and festivals, check identification of people and ensured there was no dangers present.
-			I worked at many Ireland National Team football matches in the Aviva stadium, Longitude Festival 2017, Electric Picnic 2017, Ed Sheeran concert, and Irish Drifting Championship in Dun Laoghaire.
-			</p>
-		</div>
-	</div>
-</div>
-
-<div id="Interests&Achievements"></div>
-<div class="IntAchieveContainer">
-	<h1>Interests & Achievements:</h1>
-	<div class="row">
-		<div class="sportsCard">
-			<img class="card-img-top" src="Images/sports.jpg" alt="Sports">
-			<div class="sportsCard-body">
-				<h4 class="card-title">Sports</h4>
-				<!-- Button to Open the Modal -->
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">Show More</button>
+	<div id="Interests&Achievements"></div>
+	<div class="IntAchieveContainer">
+		<h1>Interests & Achievements:</h1>
+		<div class="row">
+			<div class="sportsCard">
+				<img class="card-img-top" src="Images/sports.jpg" alt="Sports">
+				<div class="sportsCard-body">
+					<h4 class="card-title">Sports</h4>
+					<!-- Button to Open the Modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">Show More</button>
+					
+					<!-- The Modal -->
+					<div class="modal" id="myModal1">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<!-- Modal Header -->
+								<div class="modal-header">
+									<h4 class="modal-title">Sports</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>
+								<!-- Modal body -->
+								<div class="modal-body">
+									<ul>•	I was Captain of St Josephs Boys AFC football team 2013 - 2016.</ul>
+									<ul>•	I am an active member of Supreme Altitude & Fitness Centre, Bray.</ul>
+									<ul>•	I am an active runner aiming to run 5KM three times a week.</ul>
+									<ul>•	Actively playing football with friends.</ul>
+								</div>
+								<!-- Modal footer -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Display Information</a> -->
+				</div>
+			</div>
+			<div class="educationCard">
+				<img class="card-img-top" src="Images/education.jpg" alt="Education">
+				<div class="educationCard-body">
+					<h4 class="card-title">Education</h4>
+					<!-- Button to Open the Modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Show More</button>
+					
+					<!-- The Modal -->
+					<div class="modal" id="myModal2">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<!-- Modal Header -->
+								<div class="modal-header">
+									<h4 class="modal-title">Education</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>
+								<!-- Modal body -->
+								<div class="modal-body">
+									<ul>•	Presented with Principals Award in St Laurences College.</ul>
+									<ul>•	Achieved numerous awards for Full Attendance & Punctuality.</ul>
+									<ul>•	Achieved multiple Gold Star awards for Academic Effort & Achievement in school.</ul>
+									<ul>•	Received Chaminade Awards for positive contribution and engagement in school.</ul>
+								</div>
+								<!-- Modal footer -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Display Information</a> -->
+				</div>
+			</div>
+			<div class="technologyCard">
+				<img class="card-img-top" src="Images/technology.jpg" alt="Technology">
+				<div class="technologyCard-body">
+					<h4 class="card-title">Technology</h4>
 				
-				<!-- The Modal -->
-				<div class="modal" id="myModal1">
-					<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-							<!-- Modal Header -->
-							<div class="modal-header">
-								<h4 class="modal-title">Sports</h4>
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-							</div>
-							<!-- Modal body -->
-							<div class="modal-body">
-								<ul>•	I was Captain of St Josephs Boys AFC football team 2013 - 2016.</ul>
-								<ul>•	I am an active member of Supreme Altitude & Fitness Centre, Bray.</ul>
-								<ul>•	I am an active runner aiming to run 5KM three times a week.</ul>
-								<ul>•	Actively playing football with friends.</ul>
-							</div>
-							<!-- Modal footer -->
-							<div class="modal-footer">
-								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Display Information</a> -->
-			</div>
-		</div>
-		<div class="educationCard">
-			<img class="card-img-top" src="Images/education.jpg" alt="Education">
-			<div class="educationCard-body">
-				<h4 class="card-title">Education</h4>
-				<!-- Button to Open the Modal -->
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Show More</button>
-				
-				<!-- The Modal -->
-				<div class="modal" id="myModal2">
-					<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-							<!-- Modal Header -->
-							<div class="modal-header">
-								<h4 class="modal-title">Education</h4>
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-							</div>
-							<!-- Modal body -->
-							<div class="modal-body">
-								<ul>•	Presented with Principals Award in St Laurences College.</ul>
-								<ul>•	Achieved numerous awards for Full Attendance & Punctuality.</ul>
-								<ul>•	Achieved multiple Gold Star awards for Academic Effort & Achievement in school.</ul>
-								<ul>•	Received Chaminade Awards for positive contribution and engagement in school.</ul>
-							</div>
-							<!-- Modal footer -->
-							<div class="modal-footer">
-								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					<!-- Button to Open the Modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">Show More</button>
+					
+					<!-- The Modal -->
+					<div class="modal" id="myModal3">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<!-- Modal Header -->
+								<div class="modal-header">
+									<h4 class="modal-title">Technology</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>
+								<!-- Modal body -->
+								<div class="modal-body">
+									<ul>•	An active member of Code Academy that I use to further develop and enhance my skillset.</ul>
+									<ul>•	Working towards my ECDL Certification.</ul>
+									<ul>•	An active member of a small gaming community.</ul>
+								</div>
+								<!-- Modal footer -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Display Information</a> -->
-			</div>
-		</div>
-		<div class="technologyCard">
-			<img class="card-img-top" src="Images/technology.jpg" alt="Technology">
-			<div class="technologyCard-body">
-				<h4 class="card-title">Technology</h4>
-			
-				<!-- Button to Open the Modal -->
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">Show More</button>
-				
-				<!-- The Modal -->
-				<div class="modal" id="myModal3">
-					<div class="modal-dialog modal-dialog-centered">
-						<div class="modal-content">
-							<!-- Modal Header -->
-							<div class="modal-header">
-								<h4 class="modal-title">Technology</h4>
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-							</div>
-							<!-- Modal body -->
-							<div class="modal-body">
-								<ul>•	An active member of Code Academy that I use to further develop and enhance my skillset.</ul>
-								<ul>•	Working towards my ECDL Certification.</ul>
-								<ul>•	An active member of a small gaming community.</ul>
-							</div>
-							<!-- Modal footer -->
-							<div class="modal-footer">
-								<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Display Information</a> -->
 			</div>
 		</div>
 	</div>
 </div>
-
 </body>
 
 </html>
