@@ -1,0 +1,142 @@
+.jumbotron {
+	margin-bottom: 0;
+}
+
+.navbar {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999999;
+}
+
+.AboutContainer {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 50px;
+	border-style: double;
+}
+
+.EducationContainer {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 50px;
+	border-style: double;
+}
+
+.TechSkillsContainer {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 50px;
+	border-style: double;
+}
+
+.ProjectsContainer {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 50px;
+	border-style: double;
+}
+
+.WorkExpContainer {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 50px;
+	border-style: double;
+	display: inline-block;
+	word-wrap: break-word;
+}
+
+.IntAchieveContainer {
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 50px;
+	padding: 50px;
+	border-style: double;
+}
+
+.CVbtn {
+  background-color: white;
+  border: double;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 45%;
+}
+
+.youtubeCard {
+	width: 400px;
+	height: 650px;
+	border: double;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.bikeCard {
+	width: 400px;
+	height: 650px;
+	border: double;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.projectCard {
+	width: 400px;
+	height: 650px;
+	border: double;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.sportsCard {
+	width: 400px;
+	height: 500px;
+	border: double;
+	padding-bottom: 10px;
+	text-align: center;
+	margin: auto;
+}
+
+.sportsCard img {
+	margin-top: 130px;
+}
+
+.educationCard {
+	width: 400px;
+	height: 500px;
+	border: double;
+	padding-bottom: 10px;
+	text-align: center;
+	margin: auto;
+}
+
+.educationCard img {
+	margin-top: 180px;
+}
+
+.technologyCard {
+	width: 400px;
+	height: 500px;
+	border: double;
+	padding-bottom: 10px;
+	text-align: center;
+	margin: auto;
+}
+
+.technologyCard img {
+	margin-top: 125px;
+}
+
+.modal {
+	text-align: left;
+}
+
